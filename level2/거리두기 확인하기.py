@@ -43,9 +43,6 @@ def solution(places):
 
 
 
-
-
-
 from collections import deque
 
 def BFS(p):
