@@ -1,5 +1,3 @@
-
-
 from itertools import permutations
 """def solution(numbers):
     n=999999
@@ -19,9 +17,7 @@ from itertools import permutations
     
     return ans"""
 
-
-
-from itertools import permutations
+"""from itertools import permutations
 def solution(numbers):
     nn = list(numbers)
     li=[]
@@ -45,6 +41,19 @@ def solution(numbers):
             ans+=1
     return ans
 
+
+numbers="17"
+print(solution(numbers))"""
+
+
+from itertools import permutations
+def solution(n):
+    a = set()
+    for i in range(len(n)):
+        a |= set(map(int, map("".join, permutations(list(n), i + 1))))
+    print(a)
+    a -= set(range(0, 2))
+    print(a)
 
 numbers="17"
 print(solution(numbers))
