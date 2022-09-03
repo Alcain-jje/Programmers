@@ -1,4 +1,6 @@
-"""def solution(info, query):
+"""
+#시간초과 풀이
+def solution(info, query):
     ans_sit=[]
     for i in query:
         i=i.replace('and','')
@@ -26,6 +28,7 @@
     return ans_sit
 """
 
+#정답
 from itertools import combinations
 from collections import defaultdict
 
