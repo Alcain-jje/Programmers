@@ -13,7 +13,7 @@ def solution(relation):
         if len(set(tmp)) == row:
             put =True
             for x in unique:
-                if set(x).issubset(set(i)):
+                if set(x).issubset(set(i)): #x가 y의 서브 set 맞냐?
                     put=False
                     break
             if put:unique.append(i)
