@@ -5,11 +5,9 @@ def solution(s):
         if i == 0 and not s[i].isdigit():
             answer+=s[i].upper()
         elif s[i] == " ":
-            if stack:
-                answer += " "
-            else:
+            answer += " "
+            if not stack:
                 stack.append(0)
-                answer+=" "
         elif not s[i]== " " and stack:
             stack.pop()
             answer += s[i].upper()
