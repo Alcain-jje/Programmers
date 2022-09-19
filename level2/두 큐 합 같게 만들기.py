@@ -23,10 +23,38 @@ def solution(queue1, queue2):
 
     return -1
 
+
+def solution2(queue1,queue2):
+    queSum=(sum(queue1)+sum(queue2))
+    if queSum % 2:
+        return -1
+    target=queSum//2
+    n=len(queue1)
+
+    start=0
+    end=n
+    ans=0
+
+    cur=sum(queue1)
+    queue3=queue1+queue2
+    while cur != target:
+        if cur < target:
+            if end == n*2:
+                return -1
+            cur+=queue3[end]
+            end += 1
+        else:
+            cur-=queue3[start]
+            start+=1
+        ans+=1
+    return ans
+
+
+
 # queue1 = [3, 2, 7, 2]
 # queue2 = [4, 6, 5, 1]
 queue1 = [1,2,1,2]
 queue2 = [1,10,1,2]
-print(solution(queue1,queue2))
+print(solution2(queue1,queue2))
 
 
